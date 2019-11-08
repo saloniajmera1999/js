@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>prog1JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="#" id="form_id">
+    <center>
+    Name:
+    <input type="text" name="name" id="name">
+    <br>
+    Roll no:
+    <input type="number" name="roll" id="roll">
+    <br>
+    DOB:
+    <input type="date" name="dob" id="dob">
+    <br><br>
+    <input type="submit" value="Submit" onclick="check()">
+    </center>
+    <script type="text/javascript">
+       function check()
+       {
+           var username=document.getElementById("name").value;
+           var roll_no=document.getElementById("roll").value;
+           var dob=document.getElementById("dob").value;
+           var name_match=/^[a-zA-Z]{1,}[ ]*[a-zA-Z]*$/;
+   			var rollno_match=/^[0-9]{7}$/;
+           if(!username||!roll_no||!dob)
+           alert("Empty field found");
+           else if(!username.match(name_match))
+           alert("Enter a valid username");
+           else if(!roll_no.match(rollno_match))
+           alert("Enter a valid roll no");
+           else
+           alert(" Name: "+username+" Roll No: "+roll_no+" DOB: "+new Date(dob).toDateString());
+       }
+    </script>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>bsort</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action=""></form>
+            Number of elements: 
+            <input type="number" name="num" id="num">
+            <br>
+            Enter elements (separated by space)
+            <input type="text" name="array" id="array">
+            <br><br>
+            <input type="submit"  value="Submit" onclick=sort()>
+            <script type="text/javascript">
+                function sort()
+                {
+                    var num=document.getElementById("num").value;
+                    var inp=document.getElementById("array").value;
+                    var arr=inp.split(" ");
+                    console.log(arr.length);
+                    if(num!=arr.length)
+                        alert("Entered number of elements does not match the length of array");
+                    else
+                    {
+                        for(var i=0;i<arr.length-1;i++)
+                        {
+                            for(var j=0;j<arr.length-1-i;j++)
+                            {
+                                if(arr[j]>arr[j+1])
+                                {
+                                    var temp=arr[j];
+                                    arr[j]=arr[j+1];
+                                    arr[j+1]=temp;
+                                }
+                            }
+                        }
+                    alert("Sorted array: "+arr);
+             }
+         }
+        </script>
+    </body>
+</html>
