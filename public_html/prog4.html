@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let arr = [];
+            
+            function pushe()
+            {
+                let n = prompt("Enter Value");
+                arr.push(n);
+                alert("Item Pushed");
+            }
+            function pope()
+            {
+                if(arr.length==0){
+                    alert("Empty Stack");
+                }
+                else{
+                    arr.pop()
+                    alert("Item Poped");
+                }
+            }
+            function display()
+            {
+                if(arr.length==0){
+                    alert("Empty Stack");
+                }
+                else{
+                    alert("STACK : " + arr);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>STACK</h2>
+
+        <br><button onclick="pushe()">PUSH</button><br><br>
+        <button onclick="pope()">POP</button><br><br>
+        <button onclick="display()">DISPLAY</button>
+    </body>
+</html>
