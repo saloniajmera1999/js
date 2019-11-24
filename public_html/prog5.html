@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let pos=0;
+            setTimeout(function(){document.getElementById("text").style.color="red";},3000);   
+            setInterval(function(){pos++; document.getElementById("image").style.paddingLeft=pos + "%";},1000);
+        </script>
+    </head>
+    <body>
+        <p id="text">Hello World</p>
+        <img src="harry.jpg" id="image" alt="Harry Potter" height="20%" width="20%">
+    </body>
+</html>
